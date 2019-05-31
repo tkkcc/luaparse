@@ -758,7 +758,7 @@
     // Slicing the input string is prefered before string concatenation in a
     // loop for performance reasons.
     while (isIdentifierPart(input.charCodeAt(++index)));
-    value = fixupHighCharacters(input.slice(tokenStart, index));
+    value = input.slice(tokenStart, index);
 
     // Decide on the token type and possibly cast the value.
     if (isKeyword(value)) {
